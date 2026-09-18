@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;background-color:#111418;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.tech-placeholder{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;background-color:#232A31;background-image:linear-gradient(135deg, rgba(255,106,26,0.18), transparent 60%),repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 24px),repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 24px);}
+.tech-placeholder::after{content:'';position:absolute;inset:0;border:2px solid rgba(255,106,26,0.45);pointer-events:none;}
+.tech-placeholder .tech-icon{width:32%;max-width:104px;height:auto;color:#FF6A1A;opacity:0.95;filter:drop-shadow(0 0 14px rgba(255,106,26,0.35));position:relative;z-index:1;}
+.tech-placeholder .tech-icon.tech-icon-lg{max-width:180px;}
+.tech-placeholder .tech-label{position:absolute;bottom:10px;left:12px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#F2F4F5;background:rgba(11,14,18,0.78);padding:3px 9px;border-radius:4px;border:1px solid rgba(255,106,26,0.35);z-index:1;max-width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.tech-corner{position:absolute;width:16px;height:16px;border:2px solid rgba(255,106,26,0.7);z-index:1;}
+.tech-corner-tl{top:8px;left:8px;border-right:none;border-bottom:none;}
+.tech-corner-br{bottom:8px;right:8px;border-left:none;border-top:none;}
+.filter-chip{transition:background-color .15s,color .15s;}
+.filter-chip.is-active{background-color:#ff6a1a;color:#581d00;}
+.no-results{display:none;}
+.no-results.is-visible{display:flex;}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#111418", "error-container": "#93000a", "outline-variant": "#5a4137", "on-tertiary": "#27313d", "inverse-surface": "#e1e2e8", "on-primary-container": "#591e00", "surface-container-lowest": "#0b0e12", "tertiary": "#bdc7d6", "surface-bright": "#36393e", "error": "#ffb4ab", "tertiary-fixed": "#d9e3f3", "surface-tint": "#ffb597", "primary-fixed-dim": "#ffb597", "on-secondary-container": "#004d1f", "surface-container-low": "#191c20", "on-tertiary-fixed": "#121c27", "on-tertiary-container": "#28323d", "on-background": "#e1e2e8", "tertiary-fixed-dim": "#bdc7d6", "background": "#111418", "on-error-container": "#ffdad6", "surface-variant": "#323539", "primary": "#ffb597", "tertiary-container": "#909aa8", "on-tertiary-fixed-variant": "#3e4854", "surface-container": "#1d2024", "secondary-fixed": "#66ff8e", "on-secondary-fixed-variant": "#005322", "inverse-on-surface": "#2e3135", "primary-container": "#ff6a1a", "surface-dim": "#111418", "surface-container-highest": "#323539", "on-secondary-fixed": "#002109", "on-primary": "#581d00", "on-secondary": "#003915", "on-surface-variant": "#e2bfb2", "on-primary-fixed-variant": "#7d2d00", "primary-fixed": "#ffdbcd", "on-surface": "#e1e2e8", "secondary": "#41e575", "secondary-container": "#06c85d", "surface-container-high": "#272a2e", "inverse-primary": "#a43d00", "on-error": "#690005", "on-primary-fixed": "#360f00", "secondary-fixed-dim": "#3de273", "outline": "#a98a7e" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "3rem" }, "fontFamily": { "headline-sm": ["Barlow Condensed"], "headline-xl": ["Barlow Condensed"], "display-hero-mobile": ["Barlow Condensed"], "body-sm": ["Inter"], "headline-lg": ["Barlow Condensed"], "label-sm": ["Barlow Condensed"], "display-hero": ["Barlow Condensed"], "headline-md": ["Barlow Condensed"], "headline-xl-mobile": ["Barlow Condensed"], "label-md": ["Barlow Condensed"], "code-telemetry": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "22px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "44px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-hero-mobile": ["38px", { "lineHeight": "42px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "60px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["30px", { "lineHeight": "34px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-md": ["15px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }], "code-telemetry": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary">
+<svg style="display:none" aria-hidden="true">
+<defs>
+<symbol id="icon-garage" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22 L24 8 L42 22"/><path d="M9 20 V40 H39 V20"/><path d="M17 40 V28 H31 V40"/><circle cx="13" cy="34" r="1.6" fill="currentColor" stroke="none"/><circle cx="35" cy="34" r="1.6" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-team" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="16" r="6"/><path d="M12 38c0-7 5-12 12-12s12 5 12 12"/><circle cx="9" cy="20" r="4.2"/><path d="M2 38c0-5.5 3.4-9 7-9.6"/><circle cx="39" cy="20" r="4.2"/><path d="M46 38c0-5.5-3.4-9-7-9.6"/></symbol>
+<symbol id="icon-oildrop" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4C24 4 11 21 11 30a13 13 0 0 0 26 0C37 21 24 4 24 4Z"/><path d="M18 30a6 6 0 0 0 6 6" opacity="0.6"/></symbol>
+<symbol id="icon-brake" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="6"/><path d="M24 7v6M24 35v6M7 24h6M35 24h6M12.5 12.5l4.2 4.2M31.3 31.3l4.2 4.2M12.5 35.5l4.2-4.2M31.3 16.7l4.2-4.2"/><rect x="30" y="10" width="10" height="16" rx="2" transform="rotate(20 30 10)" fill="currentColor" stroke="none" opacity="0.85"/></symbol>
+<symbol id="icon-diagnostic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="10" width="34" height="24" rx="3"/><path d="M11 24h6l3-8 4 16 3-11 2 3h8"/></symbol>
+<symbol id="icon-shock" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4v8"/><path d="M24 12l-6 3 12 3-12 3 12 3-12 3 12 3-6 3"/><path d="M24 36v8"/></symbol>
+<symbol id="icon-belt" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="24" r="9"/><circle cx="34" cy="24" r="5"/><path d="M14 15a9 9 0 0 1 0 18"/><path d="M9.5 32.5L38 37M9.5 15.5L38 11"/></symbol>
+<symbol id="icon-paint" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="18" width="16" height="10" rx="2"/><path d="M22 20h8l10-4v16l-10-4h-8"/><path d="M34 22c3 0 6 1 8 0M34 26c3 0 6 1 8 0" opacity="0.7"/></symbol>
+<symbol id="icon-balance" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="15"/><path d="M24 9v30M9 24h30" opacity="0.5"/><rect x="6" y="20" width="6" height="8" rx="1" fill="currentColor" stroke="none"/><rect x="36" y="20" width="6" height="8" rx="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="icon-injector" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4h12v10l-4 6v20a2 2 0 0 1-4 0V20l-4-6Z"/><circle cx="24" cy="36" r="1.4" fill="currentColor" stroke="none"/><path d="M30 32c3 1 5 3 6 6M30 38c2 1 3 2 4 4" opacity="0.7"/></symbol>
+<symbol id="icon-wheel" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="4"/><path d="M24 20V9M27.5 22l9-6.5M26 27l7 8M22 27l-7 8M20.5 22l-9-6.5"/></symbol>
+<symbol id="icon-inspect" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="16" width="10" height="8" rx="1.5"/><path d="M15 17l14-5v20l-14-5" fill="currentColor" stroke="none" opacity="0.85"/><circle cx="36" cy="20" r="8"/><circle cx="36" cy="20" r="2.5"/></symbol>
+<symbol id="icon-speed" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 32a18 18 0 0 1 36 0"/><path d="M24 32l9-11"/><circle cx="24" cy="32" r="2.4" fill="currentColor" stroke="none"/><path d="M6 32h4M38 32h4M11 19l3 3M37 19l-3 3" opacity="0.6"/></symbol>
+<symbol id="icon-map" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4c-7 0-12.5 5.6-12.5 12.5C11.5 26 24 44 24 44s12.5-18 12.5-27.5C36.5 9.6 31 4 24 4Z"/><circle cx="24" cy="16.5" r="4.5" fill="currentColor" stroke="none"/><path d="M4 40h40M8 34l6-4M40 34l-6-4" opacity="0.4"/></symbol>
+</defs>
+</svg>
+<header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 px-margin-mobile max-w-7xl mx-auto flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><svg aria-label="Vértice" class="h-8 w-8 flex-shrink-0" viewBox="0 0 32 32"><rect x="0.75" y="0.75" width="30.5" height="30.5" rx="4" fill="#111418" stroke="#FF6A1A" stroke-width="1.5"/><path d="M6 21 L16 7 L26 21" stroke="#FF6A1A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 21 L16 13.5 L20.5 21" stroke="#FF6A1A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/></svg><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate tracking-wider leading-none">Vértice</span><span class="font-label-sm text-label-sm uppercase text-primary tracking-widest leading-none mt-1">Inicio</span></div></div><nav class="hidden md:flex items-center gap-space-lg" aria-label="Navegación principal"><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#inicio">Inicio</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#servicios">Servicios</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#catalogo">Catálogo</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#trabajos">Trabajos</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#blog">Blog</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#taller">Taller</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#contacto-form">Contacto</a></nav><div class="flex items-center gap-space-xs"><a class="hidden md:flex h-11 px-4 items-center justify-center rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider hover:brightness-110 transition-all" href="#contacto-form">Agendar revisión</a><a aria-label="Llamar al taller" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="tel:+576016893140"><span class="material-symbols-outlined text-[20px]">call</span></a><a aria-label="WhatsApp directo" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-secondary hover:text-secondary-fixed transition-colors" href="https://wa.me/573202784199"><span class="material-symbols-outlined text-[20px]">chat</span></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 md:pb-12 bg-surface"><div class="flex flex-col w-full max-w-7xl mx-auto text-on-surface">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full min-h-[580px] flex flex-col justify-end px-margin-mobile pb-space-lg overflow-hidden" id="inicio">
+<div class="absolute inset-0 z-0">
+<!-- Reemplazo de foto/video: borrar el div .tech-placeholder de abajo y descomentar este bloque cuando exista /assets/video/hero.mp4 y /assets/img/hero-poster.jpg
+<video class="w-full h-full object-cover object-center transform scale-105 filter brightness-90" autoplay muted loop playsinline poster="/assets/img/hero-poster.jpg">
+  <source src="/assets/video/hero.mp4" type="video/mp4">
+  <img src="/assets/img/hero-poster.jpg" alt="Bahía de mecánica técnica en taller automotriz de alta precisión con elevadores y herramientas industriales" class="w-full h-full object-cover object-center transform scale-105 filter brightness-90"/>
+</video>
+-->
+<div aria-label="Bahía de mecánica técnica en taller automotriz de alta precisión con elevadores y herramientas industriales" class="w-full h-full object-cover object-center transform scale-105 filter brightness-90 tech-placeholder" role="img"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon tech-icon-lg"><use href="#icon-garage"></use></svg><span class="tech-label">Taller Vértice</span><span class="tech-corner tech-corner-br"></span></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-surface/40"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,106,26,0.15),transparent_70%)]"></div>
+</div>
+<!-- Indicador de Marca -->
+<div class="relative z-10 flex items-center justify-between mb-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container/90 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Vértice Centro Automotriz</span>
+</div>
+</div>
+<!-- Contenido Textual Hero -->
+<div class="relative z-10 space-y-space-sm">
+<h1 class="font-display-hero-mobile text-display-hero-mobile uppercase text-on-surface leading-none tracking-tight">
+        Tu carro en manos expertas, <span class="text-primary-container">sin sorpresas</span> en la factura
+      </h1>
+<p class="font-body-md text-body-md text-tertiary">
+        Mecánica, diagnóstico por escáner y mantenimiento para todas las marcas. Te cotizamos por escrito antes de tocar tu vehículo.
+      </p>
+<!-- Botones de Acción -->
+<div class="pt-space-xs flex flex-col gap-2.5">
+<a class="h-12 w-full flex items-center justify-center gap-2 rounded-lg bg-primary-container text-on-surface-container font-headline-sm text-headline-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.98] transition-all" href="#contacto-form">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span>Agendar revisión</span>
+</a>
+<a class="h-12 w-full flex items-center justify-center gap-2 rounded-lg bg-[#25D366] text-surface-container-lowest font-headline-sm text-headline-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.98] transition-all font-semibold" href="https://wa.me/573202784199" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Escribir por WhatsApp</span>
+</a>
+</div>
+<!-- Fila de Confianza -->
+<div class="pt-space-xs flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="text-[#FFB800] text-sm">★ 4,8</span>
+<span class="text-tertiary-container">Google (412 reseñas)</span>
+<span class="text-surface-variant">|</span>
+<span>15 años</span>
+<span class="text-surface-variant">|</span>
+<span class="text-primary font-medium">Garantía 6M / 10k km</span>
+</div>
+</div>
+</section>
+<!-- 2. SECCIÓN 'ACERCA DE' -->
+<section class="px-margin-mobile py-space-lg">
+<div class="rounded-2xl bg-surface-container p-5 relative overflow-hidden">
+<div class="relative h-48 w-full rounded-xl overflow-hidden mb-space-md">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/nosotros-equipo.jpg
+<img src="/assets/img/nosotros-equipo.jpg" alt="Equipo de mecánicos certificados con overoles de trabajo oscuros posando con profesionalismo dentro de un taller moderno y limpio en Bogotá, rodeados de equipos automotrices de alta tecnología y elevadores hidráulicos" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Equipo de mecánicos certificados con overoles de trabajo oscuros posando con profesionalismo dentro de un taller moderno y limpio en Bogotá, rodeados de equipos automotrices de alta tecnología y elevadores hidráulicos"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-team"></use></svg><span class="tech-label">Equipo Certificado</span><span class="tech-corner tech-corner-br"></span></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/80 px-2.5 py-1 rounded backdrop-blur-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Norte de Bogotá · 15 Años</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-primary-container tracking-widest">Liderazgo y Rigor Técnico</span>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface">Ingeniería Aplicada a tu Tranquilidad</h2>
+<p class="font-body-sm text-body-sm text-tertiary">
+          Fundado y dirigido por el ingeniero mecánico <strong class="text-on-surface">Carlos Rincón</strong>, Vértice nació para erradicar la incertidumbre en los talleres tradicionales. Con 15 años de trayectoria en el norte de Bogotá, combinamos instrumentación electrónica de última generación con una estricta ética de transparencia hacia el propietario.
+        </p>
+</div>
+</div>
+</section>
+<!-- 3. SECCIÓN 'SERVICIOS' -->
+<section class="px-margin-mobile py-space-sm" id="servicios">
+<div class="flex items-end justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Protocolos de Precisión</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Servicios Técnicos</h2>
+</div>
+<span class="font-code-telemetry text-code-telemetry text-tertiary">CAT-02</span>
+</div>
+<!-- Pestañas Interactivas -->
+<div class="grid grid-cols-2 p-1 rounded-xl bg-surface-container-high mb-space-md">
+<button class="py-2.5 rounded-lg font-headline-sm text-headline-sm uppercase tracking-wider bg-primary-container text-on-primary font-semibold transition-all" id="tab-btn-maint" onclick="switchTab('maint')">
+        Mantenimiento
+      </button>
+<button class="py-2.5 rounded-lg font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all" id="tab-btn-rep" onclick="switchTab('rep')">
+        Reparación
+      </button>
+</div>
+<!-- Contenido Pestaña Mantenimiento -->
+<div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3" id="tab-content-maint">
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">build</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Mantenimiento Preventivo</h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-secondary px-2 py-0.5 rounded bg-surface-container-low">Programado</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Cambio de fluidos sintéticos, filtros OEM, bujías y sincronización computarizada.</p>
+<div class="flex justify-end pt-1">
+<a class="font-label-md text-label-md uppercase text-primary hover:text-primary-fixed inline-flex items-center gap-1" href="#contacto-form">
+            Ver más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">tire_repair</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Alineación y Balanceo</h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-primary px-2 py-0.5 rounded bg-surface-container-low">Láser 3D</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Calibración geométrica de 4 ruedas con sensores infrarrojos para desgaste homogéneo.</p>
+<div class="flex justify-end pt-1">
+<a class="font-label-md text-label-md uppercase text-primary hover:text-primary-fixed inline-flex items-center gap-1" href="#contacto-form">
+            Ver más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Pre Técnico-Mecánica</h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-secondary px-2 py-0.5 rounded bg-surface-container-low">Pista CDA</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Simulador de frenómetro, holguras, gases y luxometría para asegurar aprobación al 100%.</p>
+<div class="flex justify-end pt-1">
+<a class="font-label-md text-label-md uppercase text-primary hover:text-primary-fixed inline-flex items-center gap-1" href="#contacto-form">
+            Ver más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Contenido Pestaña Reparación (Oculto inicialmente) -->
+<div class="hidden" id="tab-content-rep">
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Diagnóstico por Escáner</h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-primary px-2 py-0.5 rounded bg-surface-container-low">OBD-II OEM</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Lectura de códigos de falla DTC, osciloscopio en tiempo real y reprogramación de módulos.</p>
+<div class="flex justify-end pt-1">
+<a class="font-label-md text-label-md uppercase text-primary hover:text-primary-fixed inline-flex items-center gap-1" href="#contacto-form">
+            Ver más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">album</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Frenos y Suspensión</h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-error px-2 py-0.5 rounded bg-surface-container-low">Seguridad</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Rectificación de discos, sustitución de pastillas cerámicas, amortiguadores y terminales.</p>
+<div class="flex justify-end pt-1">
+<a class="font-label-md text-label-md uppercase text-primary hover:text-primary-fixed inline-flex items-center gap-1" href="#contacto-form">
+            Ver más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">format_paint</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Latonería y Pintura</h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-secondary px-2 py-0.5 rounded bg-surface-container-low">Horno Presurizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Laboratorio de colorimetría PPG, secado en cabina térmica y desabollado de precisión.</p>
+<div class="flex justify-end pt-1">
+<a class="font-label-md text-label-md uppercase text-primary hover:text-primary-fixed inline-flex items-center gap-1" href="#contacto-form">
+            Ver más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Banner 1: Captación -->
+<div class="mt-space-md p-4 rounded-xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined">stars</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-bold">Cortesía Técnica</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface">Tu revisión de 30 puntos es gratis</h4>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Incluye escaneo electrónico preliminar e inspección de tren delantero sin costo al hacer mantenimiento.</p>
+</div>
+<a class="h-10 w-full flex items-center justify-center rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">
+        Agendar revisión
+      </a>
+</div>
+</section>
+<!-- 4. SECCIÓN 'CATÁLOGO DE PRODUCTOS Y SERVICIOS' -->
+<section class="px-margin-mobile py-space-lg" id="catalogo">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Soluciones Especializadas</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Catálogo de Servicios</h2>
+</div>
+<!-- Barra de Búsqueda -->
+<div class="relative mb-space-sm">
+<span class="material-symbols-outlined absolute left-3.5 top-3 text-tertiary text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-4 rounded-lg bg-surface-container text-on-surface placeholder:text-tertiary-container text-sm focus:outline-none focus:ring-1 focus:ring-primary-container" id="catalog-search" placeholder="Buscar servicio o repuesto..." type="text"/>
+</div>
+<!-- Píldoras de Filtro Desplazables -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none mb-space-md" id="catalog-filters">
+<button class="filter-chip is-active px-3.5 py-1.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="todos">Todos</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="mantenimiento">Mantenimiento</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="motor">Motor</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="frenos-suspension">Frenos y Suspensión</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="sistema-electrico">Sistema Eléctrico</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="llantas">Llantas</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="latoneria-pintura">Latonería y Pintura</button>
+</div>
+<!-- Grilla de 8 Tarjetas Detalladas -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5" id="catalog-grid">
+<!-- Card 1 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="mantenimiento">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-cambio-aceite.jpg
+<img src="/assets/img/catalogo-cambio-aceite.jpg" alt="Técnico automotriz vertiendo aceite sintético de alta gama en el motor de un vehículo moderno con luz de taller industrial e iluminación de acento naranja" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Técnico automotriz vertiendo aceite sintético de alta gama en el motor de un vehículo moderno con luz de taller industrial e iluminación de acento naranja"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-oildrop"></use></svg><span class="tech-label">Mantenimiento</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm uppercase">Mantenimiento</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Cambio de Aceite Sintético 100%</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Protección térmica avanzada y reducción de fricción para motores turbo y atmosféricos.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Filtro de aceite con certificación OEM</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Inspección de niveles de 5 fluidos esenciales</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+<!-- Card 2 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="frenos-suspension">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-frenos.jpg
+<img src="/assets/img/catalogo-frenos.jpg" alt="Detalle en primer plano de un disco de freno ventilado de alto rendimiento y cáliper nuevo montado en un taller de ingeniería automotriz" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Detalle en primer plano de un disco de freno ventilado de alto rendimiento y cáliper nuevo montado en un taller de ingeniería automotriz"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-brake"></use></svg><span class="tech-label">Frenos</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-secondary font-label-sm text-label-sm uppercase">Frenos y Suspensión</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Pastillas Cerámicas y Rectificado</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Frenado progresivo, silencioso y sin residuos de polvo en rines de aleación.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Rectificación micrométrica de discos</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Purga de líquido con equipo de presión DOT 4/5.1</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+<!-- Card 3 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="sistema-electrico">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-diagnostico.jpg
+<img src="/assets/img/catalogo-diagnostico.jpg" alt="Ingeniero mecánico automotriz sosteniendo tableta de escáner de diagnóstico conectada a puerto OBD2 mostrando curvas de telemetría gráfica en pantalla táctil" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Ingeniero mecánico automotriz sosteniendo tableta de escáner de diagnóstico conectada a puerto OBD2 mostrando curvas de telemetría gráfica en pantalla táctil"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-diagnostic"></use></svg><span class="tech-label">Diagnóstico</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary-container font-label-sm text-label-sm uppercase">Sistema Eléctrico</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Diagnóstico Telemétrico OBD-II</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Detección precisa de fallas intermitentes, sensor de oxígeno, MAF y módulos CAN-Bus.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Reporte impreso y digital en PDF</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Reset de intervalos de mantenimiento</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+<!-- Card 4 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="frenos-suspension">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-amortiguadores.jpg
+<img src="/assets/img/catalogo-amortiguadores.jpg" alt="Conjunto de amortiguadores y resortes helicoidales desmontados listos para instalación en banco de pruebas con herramientas de precisión" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Conjunto de amortiguadores y resortes helicoidales desmontados listos para instalación en banco de pruebas con herramientas de precisión"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-shock"></use></svg><span class="tech-label">Suspensión</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-secondary font-label-sm text-label-sm uppercase">Frenos y Suspensión</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Cambio de Amortiguadores a Gas</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Recuperación de la estabilidad en curvas y absorción óptima de impactos urbanos.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Inspección de copelas, topes y guardapolvos</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Incluye calibración de cotas de dirección</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+<!-- Card 5 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="motor">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-distribucion.jpg
+<img src="/assets/img/catalogo-distribucion.jpg" alt="Correa de distribución sincrónica dentada y tensores metálicos expuestos durante servicio de motor en compartimento limpio" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Correa de distribución sincrónica dentada y tensores metálicos expuestos durante servicio de motor en compartimento limpio"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-belt"></use></svg><span class="tech-label">Distribución</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm uppercase">Motor</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Kit de Distribución y Bomba de Agua</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Reemplazo crítico preventivo para salvaguardar la sincronización y válvulas del bloque motor.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Correa de alta resistencia reforzada en Kevlar</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Sustitución de poleas tensoras y refrigerante</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+<!-- Card 6 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="latoneria-pintura">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-pintura.jpg
+<img src="/assets/img/catalogo-pintura.jpg" alt="Técnico con máscara de protección usando pistola de pintura profesional en cabina de horneado con iluminación blanca pura" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Técnico con máscara de protección usando pistola de pintura profesional en cabina de horneado con iluminación blanca pura"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-paint"></use></svg><span class="tech-label">Pintura</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary-container font-label-sm text-label-sm uppercase">Latonería y Pintura</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Pintura Tricapa en Horno Térmico</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Igualación digital computarizada del tono original con barniz cerámico anti-rayones.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Cabina presurizada libre de partículas</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> 1 año de garantía en adherencia y brillo</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+<!-- Card 7 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="llantas">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-balanceo.jpg
+<img src="/assets/img/catalogo-balanceo.jpg" alt="Rueda de automóvil colocada en máquina calibradora de balanceo dinámico computarizado mostrando datos de compensación en pantalla" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Rueda de automóvil colocada en máquina calibradora de balanceo dinámico computarizado mostrando datos de compensación en pantalla"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-balance"></use></svg><span class="tech-label">Balanceo</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-secondary font-label-sm text-label-sm uppercase">Llantas</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Montaje y Balanceo Dinámico</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Eliminación de vibraciones en volante y prolongación de vida útil de neumáticos.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Pesas adhesivas ocultas de bajo perfil</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Inflado técnico con nitrógeno seco</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+<!-- Card 8 -->
+<div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="motor">
+<div class="h-36 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/catalogo-inyectores.jpg
+<img src="/assets/img/catalogo-inyectores.jpg" alt="Inyector de gasolina en banco de pruebas por ultrasonido con tubos graduados mostrando patrones de atomización de combustible" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Inyector de gasolina en banco de pruebas por ultrasonido con tubos graduados mostrando patrones de atomización de combustible"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-injector"></use></svg><span class="tech-label">Inyección</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm uppercase">Motor</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Limpieza de Inyectores por Ultrasonido</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Recuperación de potencia perdida y optimización del consumo de combustible por galón.</p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1">
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Calibración de caudal y estanqueidad</li>
+<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Cambio de microfiltros y o-rings de vitón</li>
+</ul>
+<a class="h-9 w-full flex items-center justify-center rounded bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">Solicitar cotización</a>
+</div>
+</div>
+<!-- Estado sin resultados -->
+<div class="no-results mt-space-md p-6 rounded-xl bg-surface-container flex-col items-center text-center gap-2" id="catalog-no-results">
+<span class="material-symbols-outlined text-[28px] text-tertiary">search_off</span>
+<p class="font-body-md text-body-md text-tertiary">No encontramos servicios para esa búsqueda</p>
+<button class="mt-1 px-4 py-2 rounded-lg bg-surface-container-high text-primary font-headline-sm text-headline-sm uppercase tracking-wider hover:bg-surface-bright transition-all" id="catalog-reset-btn">Ver todos</button>
+</div>
+<!-- Botón Cargar Más -->
+<div class="mt-space-md text-center" id="catalog-load-more-wrap">
+<button class="w-full py-3 rounded-lg bg-surface-container-high text-on-surface font-headline-sm text-headline-sm uppercase tracking-wider hover:bg-surface-bright active:scale-95 transition-all flex items-center justify-center gap-2" id="catalog-load-more-btn">
+<span class="material-symbols-outlined text-[20px] text-primary">sync</span>
+<span>Cargar más servicios (<span id="catalog-counter">Mostrando 8 de 8</span>)</span>
+</button>
+</div>
+</section>
+<!-- 5. SECCIÓN 'BENEFICIOS / DIFERENCIALES' -->
+<section class="px-margin-mobile py-space-sm">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Compromiso Vértice</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Nuestros Diferenciales</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<!-- Ben 1 -->
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex-shrink-0 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Cotización por escrito previa</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Ningún perno se afloja sin tu aprobación digital previa. Sin sorpresas al retirar tu vehículo.</p>
+</div>
+</div>
+<!-- Ben 2 -->
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex-shrink-0 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Garantía 6 Meses o 10.000 KM</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Respaldo total documentado en repuestos y mano de obra calificada en cada intervención.</p>
+</div>
+</div>
+<!-- Ben 3 -->
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex-shrink-0 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">inventory</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Repuestos Originales / Homologados</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Trazabilidad completa con factura legal y entrega de los componentes usados reemplazados.</p>
+</div>
+</div>
+<!-- Ben 4 -->
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex-shrink-0 flex items-center justify-center text-[#25D366]">
+<span class="material-symbols-outlined text-[22px]">videocam</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Fotos y Video por WhatsApp</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Seguimiento en directo de las piezas defectuosas antes del cambio para validar el diagnóstico.</p>
+</div>
+</div>
+</div>
+<!-- Banner 2: Servicio Destacado -->
+<div class="mt-space-md p-4 rounded-xl bg-surface-container-high relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined">auto_fix_high</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Latonería y Pintura Premium</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface">Cabina Profesional: Tu carro como nuevo</h4>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Acabado espejo sin motas ni diferencias de tonalidad. Arreglamos golpes menores y siniestros completos.</p>
+</div>
+<a class="h-10 w-full flex items-center justify-center rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="https://wa.me/573202784199?text=Hola%20deseo%20cotizar%20latoneria%20y%20pintura" rel="noopener noreferrer" target="_blank">
+        Cotizar latonería
+      </a>
+</div>
+</section>
+<!-- 6. SECCIÓN 'PROCESO DE TRABAJO' -->
+<section class="px-margin-mobile py-space-lg">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Protocolo Estricto</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Proceso de Trabajo</h2>
+</div>
+<div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+<!-- Paso 01 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-3">
+<span class="font-headline-xl text-headline-xl text-primary-container leading-none opacity-90 w-12 flex-shrink-0">01</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Agendas tu cita</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Reserva tu turno sin filas por WhatsApp o llamada directa.</p>
+</div>
+</div>
+<!-- Paso 02 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-3">
+<span class="font-headline-xl text-headline-xl text-primary-container leading-none opacity-90 w-12 flex-shrink-0">02</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Diagnóstico por escáner</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Inspección de 30 puntos clave en bahía con escáner avanzado.</p>
+</div>
+</div>
+<!-- Paso 03 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-3">
+<span class="font-headline-xl text-headline-xl text-primary-container leading-none opacity-90 w-12 flex-shrink-0">03</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Cotización por escrito</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Recibes desglose formal de repuestos y mano de obra para autorizar.</p>
+</div>
+</div>
+<!-- Paso 04 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-3">
+<span class="font-headline-xl text-headline-xl text-primary-container leading-none opacity-90 w-12 flex-shrink-0">04</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Reparación con fotos por WhatsApp</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Transparencia en tiempo real con imágenes de cada pieza intervenida.</p>
+</div>
+</div>
+<!-- Paso 05 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-3">
+<span class="font-headline-xl text-headline-xl text-secondary leading-none opacity-90 w-12 flex-shrink-0">05</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Entrega con garantía</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Prueba de ruta final, factura legal y certificado de 6 meses.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECCIÓN GALERÍA 'TRABAJOS' -->
+<section class="px-margin-mobile py-space-sm" id="trabajos">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Registro Técnico</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Trabajos Realizados</h2>
+</div>
+<!-- Filtros de Galería -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none mb-space-sm" id="gallery-filters">
+<button class="filter-chip is-active px-3.5 py-1.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="todos">Todos</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="taller">Taller</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="equipo">Equipo</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="reparaciones">Reparaciones</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="antes-despues">Antes y después</button>
+</div>
+<!-- Mosaico Dinámico Editorial -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-2.5" id="gallery-grid">
+<div class="gallery-card h-44 rounded-xl overflow-hidden relative cursor-pointer group" data-categoria="reparaciones" onclick="openGalleryModal(this, 'Rectificación y Pintura de Rines de Aleación BMW M-Sport')">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/galeria-rines-bmw.jpg
+<img src="/assets/img/galeria-rines-bmw.jpg" alt="Rin deportivo BMW de aleación gris plomo recién pintado y diamantado en cabina de secado de taller de precisión" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder group-hover:scale-105 transition-transform duration-300" role="img" aria-label="Rin deportivo BMW de aleación gris plomo recién pintado y diamantado en cabina de secado de taller de precisión"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-wheel"></use></svg><span class="tech-corner tech-corner-br"></span></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent flex items-end p-2.5">
+<span class="text-xs font-semibold text-on-surface line-clamp-1">Restauración de Rines BMW</span>
+</div>
+</div>
+<div class="gallery-card h-44 rounded-xl overflow-hidden relative cursor-pointer group" data-categoria="reparaciones" onclick="openGalleryModal(this, 'Montaje de Suspensión Neumática Audi Q7')">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/galeria-suspension-audi.jpg
+<img src="/assets/img/galeria-suspension-audi.jpg" alt="Sistema de suspensión neumática instalado en camioneta SUV Audi sobre elevador de dos postes en taller automotriz" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder group-hover:scale-105 transition-transform duration-300" role="img" aria-label="Sistema de suspensión neumática instalado en camioneta SUV Audi sobre elevador de dos postes en taller automotriz"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-shock"></use></svg><span class="tech-corner tech-corner-br"></span></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent flex items-end p-2.5">
+<span class="text-xs font-semibold text-on-surface line-clamp-1">Suspensión Neumática Audi</span>
+</div>
+</div>
+<div class="gallery-card h-44 rounded-xl overflow-hidden relative cursor-pointer group col-span-2 md:col-span-1" data-categoria="reparaciones" onclick="openGalleryModal(this, 'Pintura Completa Tricapa Mercedes-Benz Clase C')">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/galeria-pintura-mercedes.jpg
+<img src="/assets/img/galeria-pintura-mercedes.jpg" alt="Automóvil Mercedes-Benz Clase C sedán terminado con brillo espejo bajo luces lineales de inspección de calidad en cabina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder group-hover:scale-105 transition-transform duration-300" role="img" aria-label="Automóvil Mercedes-Benz Clase C sedán terminado con brillo espejo bajo luces lineales de inspección de calidad en cabina"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon tech-icon-lg"><use href="#icon-paint"></use></svg><span class="tech-corner tech-corner-br"></span></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent flex items-end p-3">
+<span class="text-sm font-semibold text-on-surface">Pintura Espejo Tricapa PPG · Mercedes-Benz</span>
+</div>
+</div>
+</div>
+<!-- Estado sin resultados -->
+<div class="no-results mt-space-md p-6 rounded-xl bg-surface-container flex-col items-center text-center gap-2" id="gallery-no-results">
+<span class="material-symbols-outlined text-[28px] text-tertiary">search_off</span>
+<p class="font-body-md text-body-md text-tertiary">No encontramos trabajos para ese filtro</p>
+<button class="mt-1 px-4 py-2 rounded-lg bg-surface-container-high text-primary font-headline-sm text-headline-sm uppercase tracking-wider hover:bg-surface-bright transition-all" id="gallery-reset-btn">Ver todos</button>
+</div>
+<div class="mt-space-md text-center">
+<button class="w-full py-3 rounded-lg bg-surface-container-high text-on-surface font-headline-sm text-headline-sm uppercase tracking-wider hover:bg-surface-bright active:scale-95 transition-all" id="gallery-view-all-btn">
+        Ver galería completa (<span id="gallery-counter">Mostrando 3 de 3</span>)
+      </button>
+</div>
+</section>
+<!-- MODAL PREVIEW GALERÍA (Interactivo) -->
+<div class="fixed inset-0 z-50 bg-surface/90 backdrop-blur-md hidden flex-col justify-center items-center p-4" id="gallery-modal" onclick="if(event.target===this) closeGalleryModal();">
+<div class="w-full max-w-sm bg-surface-container p-4 rounded-2xl flex flex-col gap-3 relative">
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center" onclick="closeGalleryModal()" aria-label="Cerrar">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="h-56 w-full rounded-xl overflow-hidden mt-6" id="modal-media" aria-label="Vista técnica ampliada"></div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface" id="modal-title"></h4>
+<p class="font-body-sm text-body-sm text-tertiary">Inspección de calidad final aprobada por ingeniero residente.</p>
+</div>
+</div>
+<!-- 8. SECCIÓN 'TESTIMONIOS' -->
+<section class="px-margin-mobile py-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Opiniones Reales</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Testimonios</h2>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-lg">
+<span class="text-[#FFB800] text-sm">★</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">4,8</span>
+<span class="font-label-sm text-label-sm text-tertiary">Google</span>
+</div>
+</div>
+<div class="flex flex-col md:grid md:grid-cols-3 gap-3">
+<!-- Testimonio 1 -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex text-[#FFB800] text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+          "Me mostraron por WhatsApp las pastillas gastadas antes de cambiarlas. Cobraron exactamente lo cotizado."
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md uppercase text-primary">— Felipe G.</span>
+<span class="text-xs text-tertiary">Bogotá · Mazda CX-5</span>
+</div>
+</div>
+<!-- Testimonio 2 -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex text-[#FFB800] text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+          "Llevé la camioneta por un ruido que nadie encontraba. Con el escáner lo resolvieron el mismo día."
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md uppercase text-primary">— Natalia C.</span>
+<span class="text-xs text-tertiary">Bogotá · Toyota Prado</span>
+</div>
+</div>
+<!-- Testimonio 3 -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex text-[#FFB800] text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+          "La revisaron antes de la técnico-mecánica y pasó a la primera."
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-md text-label-md uppercase text-primary">— Jorge L.</span>
+<span class="text-xs text-tertiary">Bogotá · Renault Duster</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. SECCIÓN 'ESTADÍSTICAS' -->
+<section class="px-margin-mobile py-space-sm">
+<div class="grid grid-cols-2 gap-2.5">
+<div class="p-4 rounded-xl bg-surface-container text-center flex flex-col items-center justify-center">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary-container leading-none">15</span>
+<span class="font-label-sm text-label-sm uppercase text-tertiary mt-1">Años de Trayectoria</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container text-center flex flex-col items-center justify-center">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary-container leading-none">+20k</span>
+<span class="font-label-sm text-label-sm uppercase text-tertiary mt-1">Vehículos Atendidos</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container text-center flex flex-col items-center justify-center">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary-container leading-none">9</span>
+<span class="font-label-sm text-label-sm uppercase text-tertiary mt-1">Técnicos Certificados</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container text-center flex flex-col items-center justify-center">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary-container leading-none">4,8 ★</span>
+<span class="font-label-sm text-label-sm uppercase text-tertiary mt-1">Calificación Google</span>
+</div>
+</div>
+<!-- Banner 3: Conversión B2B -->
+<div class="mt-space-md p-4 rounded-xl bg-surface-container-high relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined">corporate_fare</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Convenio Corporativo</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface">¿Tienes una flota o empresa?</h4>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Planes de mantenimiento con precio fijo, factura electrónica centralizada y atención prioritaria para tus vehículos.</p>
+</div>
+<a class="h-10 w-full flex items-center justify-center rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">
+        Solicitar cotización
+      </a>
+</div>
+</section>
+<!-- 10. SECCIÓN 'BLOG / NOTICIAS' -->
+<section class="px-margin-mobile py-space-lg" id="blog">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Consejos y Diagnóstico</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Blog Técnico</h2>
+</div>
+<!-- Filtros de Blog -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none mb-space-sm" id="blog-filters">
+<button class="filter-chip is-active px-3.5 py-1.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="todos">Todos</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="mantenimiento">Mantenimiento</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="seguridad">Seguridad</button>
+<button class="filter-chip px-3.5 py-1.5 rounded bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm uppercase whitespace-nowrap" data-filter="tecnico-mecanica">Técnico-Mecánica</button>
+</div>
+<div id="blog-grid">
+<!-- Artículo Destacado Principal -->
+<div class="blog-card rounded-xl bg-surface-container overflow-hidden p-3 mb-3 flex flex-col gap-2.5" data-categoria="mantenimiento">
+<div class="h-44 w-full rounded-lg overflow-hidden relative">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/blog-nivel-aceite.jpg
+<img src="/assets/img/blog-nivel-aceite.jpg" alt="Varilla medidora de nivel de aceite automotriz dorada y limpia sostenida por mecánico cerca del motor del vehículo" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Varilla medidora de nivel de aceite automotriz dorada y limpia sostenida por mecánico cerca del motor del vehículo"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-oildrop"></use></svg><span class="tech-label">Nivel de Aceite</span><span class="tech-corner tech-corner-br"></span></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm uppercase">Mantenimiento</span>
+</div>
+<div>
+<span class="text-xs text-tertiary">14 Octubre, 2024 · Por Ing. Carlos Rincón</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mt-0.5">¿Cada cuánto cambiar el aceite?</h3>
+<p class="font-body-sm text-body-sm text-tertiary line-clamp-2 mt-1">Conoce las diferencias críticas de kilometraje entre aceite mineral, semisintético y 100% sintético bajo las condiciones de tráfico de Bogotá.</p>
+</div>
+</div>
+<!-- 2 Artículos Secundarios -->
+<div class="flex flex-col md:grid md:grid-cols-2 gap-3">
+<div class="blog-card p-3 rounded-xl bg-surface-container flex gap-3" data-categoria="seguridad">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/blog-ruidos-carro.jpg
+<img src="/assets/img/blog-ruidos-carro.jpg" alt="Primer plano de la rueda delantera y amortiguador en elevador con técnico inspeccionando con linterna frontal" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Primer plano de la rueda delantera y amortiguador en elevador con técnico inspeccionando con linterna frontal"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-inspect"></use></svg><span class="tech-label">Inspección</span><span class="tech-corner tech-corner-br"></span></div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-sm text-label-sm uppercase text-error">Seguridad</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface line-clamp-1">5 ruidos de tu carro que no debes ignorar</h4>
+<p class="font-body-sm text-body-sm text-tertiary line-clamp-2">Chirridos al frenar o golpeteo al girar la dirección: cómo identificar su origen a tiempo.</p>
+</div>
+</div>
+<div class="blog-card p-3 rounded-xl bg-surface-container flex gap-3" data-categoria="tecnico-mecanica">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/blog-prueba-frenos.jpg
+<img src="/assets/img/blog-prueba-frenos.jpg" alt="Pista de pruebas para inspección técnico mecánica vehicular con rodillos de prueba de frenos iluminados" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-full object-cover tech-placeholder" role="img" aria-label="Pista de pruebas para inspección técnico mecánica vehicular con rodillos de prueba de frenos iluminados"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-speed"></use></svg><span class="tech-label">Prueba de Frenos</span><span class="tech-corner tech-corner-br"></span></div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Técnico-Mecánica</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface line-clamp-1">Cómo preparar tu carro para la técnico-mecánica</h4>
+<p class="font-body-sm text-body-sm text-tertiary line-clamp-2">Los 8 ítems más comunes por los que rechazan vehículos en CDA y cómo evitarlos.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Estado sin resultados -->
+<div class="no-results mt-space-sm p-6 rounded-xl bg-surface-container flex-col items-center text-center gap-2" id="blog-no-results">
+<span class="material-symbols-outlined text-[28px] text-tertiary">search_off</span>
+<p class="font-body-md text-body-md text-tertiary">No encontramos artículos para ese filtro</p>
+<button class="mt-1 px-4 py-2 rounded-lg bg-surface-container-high text-primary font-headline-sm text-headline-sm uppercase tracking-wider hover:bg-surface-bright transition-all" id="blog-reset-btn">Ver todos</button>
+</div>
+<div class="mt-space-sm text-right" id="blog-see-all-wrap">
+<a class="font-headline-sm text-headline-sm uppercase text-primary hover:text-primary-fixed inline-flex items-center gap-1" href="#blog">
+        Ver todos los artículos <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Banner 4: Contenido Descargable -->
+<div class="mt-space-md p-4 rounded-xl bg-surface-container-high relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined">checklist</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Guía Gratuita</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface">Checklist gratis: 10 revisiones antes de salir a carretera</h4>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Presión de llantas, líquidos, equipo de carretera reglamentario y luces preventivas.</p>
+</div>
+<a class="h-10 w-full flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="https://wa.me/573202784199?text=Hola%20deseo%20el%20checklist%20gratis%20para%20viaje" rel="noopener noreferrer" target="_blank">
+        Ver el checklist
+      </a>
+</div>
+</section>
+<!-- 11. SECCIÓN 'PREGUNTAS FRECUENTES' -->
+<section class="px-margin-mobile py-space-sm">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Resolución de Dudas</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Preguntas Frecuentes</h2>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- FAQ 1 -->
+<div class="rounded-xl bg-surface-container overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(1)">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface pr-2">¿Trabajan con todas las marcas?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform" id="faq-icon-1">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 font-body-sm text-body-sm text-tertiary" id="faq-ans-1">
+          Sí. Contamos con escáneres multimarca y software OEM para gama asiática, europea y americana (Renault, Chevrolet, Mazda, Toyota, Volkswagen, Ford, BMW, Mercedes y Audi).
+        </div>
+</div>
+<!-- FAQ 2 -->
+<div class="rounded-xl bg-surface-container overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(2)">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface pr-2">¿Cuánto tarda un mantenimiento?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform" id="faq-icon-2">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 font-body-sm text-body-sm text-tertiary" id="faq-ans-2">
+          Un mantenimiento preventivo básico toma entre 2 y 3 horas con cita previa. Si requiere repuestos especiales o sincronización avanzada, te indicamos la hora exacta de entrega en la cotización.
+        </div>
+</div>
+<!-- FAQ 3 -->
+<div class="rounded-xl bg-surface-container overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(3)">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface pr-2">¿Qué cubre la garantía?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform" id="faq-icon-3">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 font-body-sm text-body-sm text-tertiary" id="faq-ans-3">
+          Nuestra garantía de 6 meses o 10.000 km cubre tanto el repuesto instalado como la mano de obra sin costo adicional en caso de fallo técnico.
+        </div>
+</div>
+<!-- FAQ 4 -->
+<div class="rounded-xl bg-surface-container overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(4)">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface pr-2">¿Me entregan factura?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform" id="faq-icon-4">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 font-body-sm text-body-sm text-tertiary" id="faq-ans-4">
+          Entregamos Factura Electrónica DIAN detallada por cada repuesto y labor efectuada, válida para deducciones tributarias de empresas y garantías legales.
+        </div>
+</div>
+<!-- FAQ 5 -->
+<div class="rounded-xl bg-surface-container overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleFaq(5)">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface pr-2">¿Puedo esperar en el taller mientras revisan mi carro?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform" id="faq-icon-5">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 font-body-sm text-body-sm text-tertiary" id="faq-ans-5">
+          Claro que sí. Disponemos de sala VIP con Wi-Fi de alta velocidad, café gourmet y vista directa acristalada hacia la bahía de trabajo donde intervienen tu vehículo.
+        </div>
+</div>
+</div>
+<!-- Banner 5: Contacto Rápido Tablero -->
+<div class="mt-space-md p-4 rounded-xl bg-surface-container-high relative overflow-hidden flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined">warning</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Asistencia Inmediata</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface">¿Se prendió un testigo en el tablero?</h4>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Escríbenos, envíanos la foto del testigo y un técnico te orientará sin costo si es seguro seguir conduciendo.</p>
+</div>
+<a class="h-10 w-full flex items-center justify-center gap-2 rounded-lg bg-[#25D366] text-surface-container-lowest font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all font-semibold" href="https://wa.me/573202784199?text=Hola%20se%20prendio%20un%20testigo%20en%20el%20tablero%20de%20mi%20carro" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Chatear por WhatsApp</span>
+</a>
+</div>
+</section>
+<!-- 12. SECCIÓN 'UBICACIÓN' -->
+<section class="px-margin-mobile py-space-lg" id="taller">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Sede Norte</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Ubicación del Taller</h2>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3.5">
+<!-- Mapa Estilizado Preview -->
+<!-- Reemplazo de foto: borrar el div .tech-placeholder de abajo y descomentar esta línea cuando exista /assets/img/mapa-ubicacion.jpg (o un embed de Google Maps)
+<img src="/assets/img/mapa-ubicacion.jpg" alt="Mapa de ubicación del taller Vértice en Autopista Norte, Bogotá" class="w-full h-full object-cover"/>
+-->
+<div class="w-full h-44 rounded-lg relative overflow-hidden tech-placeholder" data-location="Autopista Norte 134-50, Bogotá, Colombia"><span class="tech-corner tech-corner-tl"></span><svg class="tech-icon"><use href="#icon-map"></use></svg><span class="tech-corner tech-corner-br"></span>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent flex items-end p-3">
+<div class="flex items-center gap-2 bg-surface-container-high/90 px-3 py-1.5 rounded-lg backdrop-blur-md">
+<span class="material-symbols-outlined text-primary-container text-[18px]">pin_drop</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase">Autopista Norte #134-50</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">location_on</span>
+<div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface block">Dirección Principal</span>
+<span class="font-body-sm text-body-sm text-tertiary">Autopista Norte #134-50, Bogotá D.C. (Costado Occidental)</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">schedule</span>
+<div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface block">Horarios de Atención</span>
+<span class="font-body-sm text-body-sm text-tertiary block">Lunes a Viernes: 7:00 a. m. – 6:00 p. m.</span>
+<span class="font-body-sm text-body-sm text-tertiary block">Sábados: 8:00 a. m. – 3:00 p. m.</span>
+</div>
+</div>
+</div>
+<a class="h-10 w-full flex items-center justify-center gap-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="https://maps.google.com/?q=Autopista+Norte+134+Bogota" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Cómo llegar</span>
+</a>
+</div>
+</section>
+<!-- 13. SECCIÓN 'CONTACTO' -->
+<section class="px-margin-mobile py-space-sm" id="contacto-form">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Atención Inmediata</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Agenda tu Servicio</h2>
+</div>
+<!-- Formulario Móvil Completo -->
+<form class="p-4 rounded-xl bg-surface-container flex flex-col gap-3.5 mb-space-md" id="appointment-form">
+<div>
+<label class="font-label-sm text-label-sm uppercase text-tertiary block mb-1" for="nombre">Nombre Completo *</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface placeholder:text-tertiary-container text-sm focus:outline-none focus:ring-1 focus:ring-primary-container" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Andrés Gómez" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase text-tertiary block mb-1" for="whatsapp">WhatsApp de Contacto *</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface placeholder:text-tertiary-container text-sm focus:outline-none focus:ring-1 focus:ring-primary-container" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="Ej: 312 000 0000" required="" type="tel"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase text-tertiary block mb-1" for="vehiculo">Placa o Modelo del Vehículo *</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface placeholder:text-tertiary-container text-sm focus:outline-none focus:ring-1 focus:ring-primary-container" id="vehiculo" name="vehiculo" autocomplete="off" placeholder="Ej: ABC 123 o Mazda 3 2021" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase text-tertiary block mb-1" for="servicio">Servicio de Interés *</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface text-on-surface text-sm focus:outline-none focus:ring-1 focus:ring-primary-container" id="servicio" name="servicio" required="">
+<option disabled="" selected="" value="">Selecciona un servicio...</option>
+<option value="mantenimiento">Mantenimiento Preventivo (Aceite y Filtros)</option>
+<option value="escaner">Diagnóstico por Escáner OBD-II</option>
+<option value="frenos">Frenos y Suspensión</option>
+<option value="tecnomecanica">Previsión Técnico-Mecánica</option>
+<option value="latoneria">Latonería y Pintura en Cabina</option>
+<option value="otro">Otro diagnóstico especializado</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase text-tertiary block mb-1" for="mensaje">Mensaje o Síntomas (Opcional)</label>
+<textarea class="w-full p-3 rounded-lg bg-surface text-on-surface placeholder:text-tertiary-container text-sm focus:outline-none focus:ring-1 focus:ring-primary-container" id="mensaje" name="mensaje" placeholder="Describe ruidos, testigos o lo que desees revisar..." rows="3"></textarea>
+</div>
+<div class="flex items-start gap-2 pt-1">
+<input class="mt-1 w-4 h-4 rounded bg-surface border-0 accent-primary-container" id="habeas-data" name="habeas-data" required="" type="checkbox"/>
+<label class="text-xs text-tertiary leading-tight" for="habeas-data">
+          Autorizo el tratamiento de mis datos personales según la política de privacidad de Vértice Automotriz.
+        </label>
+</div>
+<button class="h-12 w-full mt-2 flex items-center justify-center gap-2 rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all" type="submit" id="appointment-submit-btn">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Solicitar información</span>
+</button>
+<div class="hidden items-center gap-2 p-3 rounded-lg bg-surface-container-high text-secondary font-body-sm text-body-sm" id="form-feedback">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<span>Solicitud recibida. Un asesor técnico te contactará por WhatsApp en breve.</span>
+</div>
+</form>
+<!-- Datos Directos de Atención -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3">
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Canales Telefónicos y Digitales</span>
+<div class="flex flex-col gap-2.5">
+<a class="flex items-center gap-3 text-on-surface hover:text-secondary transition-colors" href="https://wa.me/573202784199" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary text-[22px]">chat</span>
+<span class="font-headline-sm text-headline-sm">WhatsApp: +57 320 278 4199</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="tel:+576016893140">
+<span class="material-symbols-outlined text-primary text-[22px]">call</span>
+<span class="font-headline-sm text-headline-sm">Línea Fija: (601) 689 3140</span>
+</a>
+</div>
+<!-- Redes Sociales -->
+<div class="pt-2 flex items-center gap-3">
+<a aria-label="Instagram" class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:text-primary transition-colors" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a aria-label="Facebook" class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:text-primary transition-colors" href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a aria-label="TikTok" class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:text-primary transition-colors" href="https://www.tiktok.com/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+</a>
+<a aria-label="YouTube" class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:text-primary transition-colors" href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 14. CTA FINAL -->
+<section class="px-margin-mobile pt-space-md pb-space-lg">
+<div class="p-5 rounded-2xl bg-gradient-to-b from-surface-container-high to-surface-container text-center flex flex-col items-center gap-3 relative overflow-hidden">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface leading-tight">
+        Agenda hoy tu revisión y maneja tranquilo
+      </h2>
+<p class="font-body-sm text-body-sm text-tertiary">
+        Diagnóstico computarizado preciso, cotización transparente y técnicos de confianza en Bogotá.
+      </p>
+<!-- 3 Botones Solicitados -->
+<div class="w-full flex flex-col gap-2.5 pt-2">
+<a class="h-11 w-full flex items-center justify-center rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="#contacto-form">
+          Agendar revisión
+        </a>
+<a class="h-11 w-full flex items-center justify-center gap-2 rounded-lg bg-[#25D366] text-surface-container-lowest font-headline-sm text-headline-sm uppercase tracking-wider font-semibold active:scale-95 transition-all" href="https://wa.me/573202784199" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<a class="h-11 w-full flex items-center justify-center gap-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-headline-sm uppercase tracking-wider active:scale-95 transition-all" href="tel:+576016893140">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Llamar</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Control de Pestañas de Servicios
+  var TAB_GRID_CLASSES = 'flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3';
+  function switchTab(tab) {
+    const maintContent = document.getElementById('tab-content-maint');
+    const repContent = document.getElementById('tab-content-rep');
+    const btnMaint = document.getElementById('tab-btn-maint');
+    const btnRep = document.getElementById('tab-btn-rep');
+
+    if (tab === 'maint') {
+      maintContent.className = TAB_GRID_CLASSES;
+      repContent.className = 'hidden';
+
+      btnMaint.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+      btnMaint.classList.remove('text-on-surface-variant');
+      btnRep.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+      btnRep.classList.add('text-on-surface-variant');
+    } else {
+      repContent.className = TAB_GRID_CLASSES;
+      maintContent.className = 'hidden';
+
+      btnRep.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+      btnRep.classList.remove('text-on-surface-variant');
+      btnMaint.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+      btnMaint.classList.add('text-on-surface-variant');
+    }
+  }
+
+  // Acordeón de FAQ
+  function toggleFaq(id) {
+    const ans = document.getElementById('faq-ans-' + id);
+    const icon = document.getElementById('faq-icon-' + id);
+    if (ans.classList.contains('hidden')) {
+      ans.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      ans.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  // Galería Modal: clona el contenido real de la tarjeta (foto o placeholder)
+  function openGalleryModal(triggerEl, title) {
+    const modal = document.getElementById('gallery-modal');
+    const modalMedia = document.getElementById('modal-media');
+    const modalTitle = document.getElementById('modal-title');
+    const source = triggerEl.querySelector('img, .tech-placeholder');
+    modalMedia.innerHTML = '';
+    if (source) {
+      const clone = source.cloneNode(true);
+      clone.className = 'w-full h-full object-cover' + (clone.tagName === 'DIV' ? ' tech-placeholder' : '');
+      modalMedia.appendChild(clone);
+    }
+    modalTitle.innerText = title;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.addEventListener('keydown', handleGalleryEscape);
+  }
+
+  function closeGalleryModal() {
+    const modal = document.getElementById('gallery-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.removeEventListener('keydown', handleGalleryEscape);
+  }
+
+  function handleGalleryEscape(e) {
+    if (e.key === 'Escape') closeGalleryModal();
+  }
+
+  // ---- Utilidad: normaliza texto (minúsculas, sin tildes) ----
+  function normalizeText(str) {
+    return (str || '').normalize('NFD').replace(new RegExp('[̀-ͯ]', 'g'), '').toLowerCase();
+  }
+
+  // ---- Filtro de chips genérico (catálogo / galería / blog) ----
+  function setupChipFilter(containerId, onChange) {
+    const container = document.getElementById(containerId);
+    if (!container) return { getActive: function () { return 'todos'; }, setActive: function () {} };
+    let active = 'todos';
+    const chips = Array.from(container.querySelectorAll('.filter-chip'));
+    function setActive(filter) {
+      active = filter;
+      chips.forEach(function (chip) {
+        chip.classList.toggle('is-active', chip.dataset.filter === filter);
+      });
+      onChange(active);
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () { setActive(chip.dataset.filter); });
+    });
+    return { getActive: function () { return active; }, setActive: setActive };
+  }
+
+  // ---- CATÁLOGO: búsqueda + filtro por categoría + paginación ----
+  (function initCatalog() {
+    const grid = document.getElementById('catalog-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.catalog-card'));
+    const searchInput = document.getElementById('catalog-search');
+    const noResults = document.getElementById('catalog-no-results');
+    const loadMoreWrap = document.getElementById('catalog-load-more-wrap');
+    const loadMoreBtn = document.getElementById('catalog-load-more-btn');
+    const counter = document.getElementById('catalog-counter');
+    const resetBtn = document.getElementById('catalog-reset-btn');
+    const PAGE_SIZE = 6;
+    let visibleLimit = PAGE_SIZE;
+    let searchTerm = '';
+
+    const chipFilter = setupChipFilter('catalog-filters', function () {
+      visibleLimit = PAGE_SIZE;
+      render();
+    });
+
+    function matches(card) {
+      const categoria = chipFilter.getActive();
+      const categoriaOk = categoria === 'todos' || card.dataset.categoria === categoria;
+      if (!categoriaOk) return false;
+      if (!searchTerm) return true;
+      const title = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
+      const desc = card.querySelector('p') ? card.querySelector('p').textContent : '';
+      return normalizeText(title + ' ' + desc).indexOf(searchTerm) !== -1;
+    }
+
+    function render() {
+      const matched = cards.filter(matches);
+      cards.forEach(function (card) { card.classList.add('hidden'); });
+      matched.slice(0, visibleLimit).forEach(function (card) { card.classList.remove('hidden'); });
+
+      const shown = Math.min(visibleLimit, matched.length);
+      noResults.classList.toggle('is-visible', matched.length === 0);
+      grid.classList.toggle('hidden', matched.length === 0);
+
+      if (matched.length > shown) {
+        loadMoreWrap.classList.remove('hidden');
+        counter.textContent = 'Mostrando ' + shown + ' de ' + matched.length;
+      } else {
+        loadMoreWrap.classList.add('hidden');
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        searchTerm = normalizeText(searchInput.value.trim());
+        visibleLimit = PAGE_SIZE;
+        render();
+      });
+    }
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function () {
+        visibleLimit += PAGE_SIZE;
+        render();
+      });
+    }
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        searchTerm = '';
+        if (searchInput) searchInput.value = '';
+        visibleLimit = PAGE_SIZE;
+        chipFilter.setActive('todos');
+      });
+    }
+
+    render();
+  })();
+
+  // ---- GALERÍA: filtro por categoría (sin buscador) ----
+  (function initGallery() {
+    const grid = document.getElementById('gallery-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.gallery-card'));
+    const noResults = document.getElementById('gallery-no-results');
+    const counter = document.getElementById('gallery-counter');
+    const resetBtn = document.getElementById('gallery-reset-btn');
+    const viewAllBtn = document.getElementById('gallery-view-all-btn');
+
+    const chipFilter = setupChipFilter('gallery-filters', function () { render(); });
+
+    function render() {
+      const categoria = chipFilter.getActive();
+      const matched = cards.filter(function (card) {
+        return categoria === 'todos' || card.dataset.categoria === categoria;
+      });
+      cards.forEach(function (card) { card.classList.add('hidden'); });
+      matched.forEach(function (card) { card.classList.remove('hidden'); });
+      noResults.classList.toggle('is-visible', matched.length === 0);
+      grid.classList.toggle('hidden', matched.length === 0);
+      counter.textContent = 'Mostrando ' + matched.length + ' de ' + cards.length;
+    }
+
+    if (resetBtn) resetBtn.addEventListener('click', function () { chipFilter.setActive('todos'); });
+    if (viewAllBtn) viewAllBtn.addEventListener('click', function () {
+      chipFilter.setActive('todos');
+      grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    render();
+  })();
+
+  // ---- BLOG: filtro por categoría (sin buscador) ----
+  (function initBlog() {
+    const grid = document.getElementById('blog-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.blog-card'));
+    const noResults = document.getElementById('blog-no-results');
+    const seeAllWrap = document.getElementById('blog-see-all-wrap');
+    const resetBtn = document.getElementById('blog-reset-btn');
+
+    const chipFilter = setupChipFilter('blog-filters', function () { render(); });
+
+    function render() {
+      const categoria = chipFilter.getActive();
+      const matched = cards.filter(function (card) {
+        return categoria === 'todos' || card.dataset.categoria === categoria;
+      });
+      cards.forEach(function (card) { card.classList.add('hidden'); });
+      matched.forEach(function (card) { card.classList.remove('hidden'); });
+      noResults.classList.toggle('is-visible', matched.length === 0);
+      grid.classList.toggle('hidden', matched.length === 0);
+      if (seeAllWrap) seeAllWrap.classList.toggle('hidden', matched.length === 0);
+    }
+
+    if (resetBtn) resetBtn.addEventListener('click', function () { chipFilter.setActive('todos'); });
+
+    render();
+  })();
+
+  // ---- FORMULARIO DE CONTACTO: FormSubmit con fallback a WhatsApp ----
+  (function initAppointmentForm() {
+    const form = document.getElementById('appointment-form');
+    if (!form) return;
+    const feedback = document.getElementById('form-feedback');
+    const submitBtn = document.getElementById('appointment-submit-btn');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const whatsapp = document.getElementById('whatsapp').value.trim();
+      const vehiculo = document.getElementById('vehiculo').value.trim();
+      const servicioSelect = document.getElementById('servicio');
+      const servicio = servicioSelect.options[servicioSelect.selectedIndex].text;
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      const whatsappLines = [
+        'Hola Vértice, quiero agendar una revisión.',
+        'Nombre: ' + nombre,
+        'WhatsApp: ' + whatsapp,
+        'Vehículo: ' + vehiculo,
+        'Servicio: ' + servicio
+      ];
+      if (mensaje) whatsappLines.push('Mensaje: ' + mensaje);
+      const whatsappUrl = 'https://wa.me/573202784199?text=' + encodeURIComponent(whatsappLines.join('\n'));
+
+      submitBtn.disabled = true;
+
+      fetch('https://formsubmit.co/ajax/saul.tintinago@outlook.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          Nombre: nombre,
+          WhatsApp: whatsapp,
+          Vehiculo: vehiculo,
+          Servicio: servicio,
+          Mensaje: mensaje || 'Sin comentarios adicionales',
+          _subject: 'Nueva solicitud de servicio - Vértice Centro Automotriz'
+        })
+      })
+        .then(function (res) { if (!res.ok) throw new Error('formsubmit-error'); return res.json(); })
+        .then(function () {
+          feedback.classList.remove('hidden');
+          feedback.classList.add('flex');
+          form.reset();
+          submitBtn.disabled = false;
+        })
+        .catch(function () {
+          feedback.classList.remove('hidden');
+          feedback.classList.add('flex');
+          submitBtn.disabled = false;
+          window.location.href = whatsappUrl;
+        });
+    });
+  })();
+</script></main><nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.7)]" data-active-classes="text-primary-container font-semibold"><div class="px-margin-mobile pt-space-xs pb-space-xs"><div class="grid grid-cols-2 gap-space-sm mb-space-xs"><a class="h-11 px-3 flex items-center justify-center gap-2 rounded-xl bg-surface-container-high text-on-surface font-headline-sm text-headline-sm uppercase tracking-wider hover:bg-surface-bright active:scale-[0.98] transition-all" href="tel:+576016893140"><span class="material-symbols-outlined text-[18px] text-primary">call</span><span>Llamar</span></a><a class="h-11 px-3 flex items-center justify-center gap-2 rounded-xl bg-secondary-container text-on-secondary-fixed font-headline-sm text-headline-sm uppercase tracking-wider hover:brightness-110 active:scale-[0.98] transition-all" href="https://wa.me/573202784199"><span class="material-symbols-outlined text-[18px] text-on-secondary-fixed">forum</span><span>WhatsApp</span></a></div><div class="flex justify-between items-center h-14"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center py-1 transition-colors text-primary-container font-semibold" data-path="inicio" href="#inicio"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Inicio</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="servicios" href="#servicios"><span class="material-symbols-outlined text-[20px]">build_circle</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Servicios</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="trabajos" href="#trabajos"><span class="material-symbols-outlined text-[20px]">garage</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Trabajos</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo" href="#catalogo"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Catálogo</span></a><a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="contacto" href="#taller"><span class="material-symbols-outlined text-[20px]">pin_drop</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Taller</span></a></div></div></nav></body></html>
