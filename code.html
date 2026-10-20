@@ -14,6 +14,12 @@
 .filter-chip.is-active{background-color:#ff6a1a;color:#581d00;}
 .no-results{display:none;}
 .no-results.is-visible{display:flex;}
+@keyframes kenburns-a{0%{transform:scale(1) translate(0,0);}100%{transform:scale(1.18) translate(-3%,-2%);}}
+@keyframes kenburns-b{0%{transform:scale(1.12) translate(-2%,1%);}100%{transform:scale(1.25) translate(2%,-3%);}}
+.hero-media-a,.hero-media-b{will-change:transform;transform-origin:center;}
+.hero-media-a{animation:kenburns-a 15s ease-in-out infinite alternate;}
+.hero-media-b{animation:kenburns-b 17s ease-in-out infinite alternate;}
+@media (prefers-reduced-motion: reduce){.hero-media-a,.hero-media-b{animation:none;}}
 </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#111418", "error-container": "#93000a", "outline-variant": "#5a4137", "on-tertiary": "#27313d", "inverse-surface": "#e1e2e8", "on-primary-container": "#591e00", "surface-container-lowest": "#0b0e12", "tertiary": "#bdc7d6", "surface-bright": "#36393e", "error": "#ffb4ab", "tertiary-fixed": "#d9e3f3", "surface-tint": "#ffb597", "primary-fixed-dim": "#ffb597", "on-secondary-container": "#004d1f", "surface-container-low": "#191c20", "on-tertiary-fixed": "#121c27", "on-tertiary-container": "#28323d", "on-background": "#e1e2e8", "tertiary-fixed-dim": "#bdc7d6", "background": "#111418", "on-error-container": "#ffdad6", "surface-variant": "#323539", "primary": "#ffb597", "tertiary-container": "#909aa8", "on-tertiary-fixed-variant": "#3e4854", "surface-container": "#1d2024", "secondary-fixed": "#66ff8e", "on-secondary-fixed-variant": "#005322", "inverse-on-surface": "#2e3135", "primary-container": "#ff6a1a", "surface-dim": "#111418", "surface-container-highest": "#323539", "on-secondary-fixed": "#002109", "on-primary": "#581d00", "on-secondary": "#003915", "on-surface-variant": "#e2bfb2", "on-primary-fixed-variant": "#7d2d00", "primary-fixed": "#ffdbcd", "on-surface": "#e1e2e8", "secondary": "#41e575", "secondary-container": "#06c85d", "surface-container-high": "#272a2e", "inverse-primary": "#a43d00", "on-error": "#690005", "on-primary-fixed": "#360f00", "secondary-fixed-dim": "#3de273", "outline": "#a98a7e" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1.25rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "3rem" }, "fontFamily": { "headline-sm": ["Barlow Condensed"], "headline-xl": ["Barlow Condensed"], "display-hero-mobile": ["Barlow Condensed"], "body-sm": ["Inter"], "headline-lg": ["Barlow Condensed"], "label-sm": ["Barlow Condensed"], "display-hero": ["Barlow Condensed"], "headline-md": ["Barlow Condensed"], "headline-xl-mobile": ["Barlow Condensed"], "label-md": ["Barlow Condensed"], "code-telemetry": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "22px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "44px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-hero-mobile": ["38px", { "lineHeight": "42px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "60px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["30px", { "lineHeight": "34px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-md": ["15px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }], "code-telemetry": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary">
 <svg style="display:none" aria-hidden="true">
 <defs>
@@ -267,7 +273,7 @@
 <!-- Card 1 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="gastronomia">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-restaurante.jpg" alt="Interior moderno de restaurante con mesas elegantes e iluminación cálida ambiental" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-restaurante.jpg" alt="Interior moderno de restaurante con mesas elegantes e iluminación cálida ambiental" class="w-full h-full object-cover hero-media-a" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm uppercase">Restaurantes</span>
 </div>
 <div>
@@ -283,7 +289,7 @@
 <!-- Card 2 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="moda">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-zapateria.jpg" alt="Vitrina de zapatería con calzado exhibido en estantes de madera iluminados" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-zapateria.jpg" alt="Vitrina de zapatería con calzado exhibido en estantes de madera iluminados" class="w-full h-full object-cover hero-media-b" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-secondary font-label-sm text-label-sm uppercase">Moda y Calzado</span>
 </div>
 <div>
@@ -299,7 +305,7 @@
 <!-- Card 3 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="joyeria">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-joyeria.jpg" alt="Exhibición de joyería fina con anillos y collares sobre terciopelo bajo luces de acento" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-joyeria.jpg" alt="Exhibición de joyería fina con anillos y collares sobre terciopelo bajo luces de acento" class="w-full h-full object-cover hero-media-a" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary-container font-label-sm text-label-sm uppercase">Joyería</span>
 </div>
 <div>
@@ -315,7 +321,7 @@
 <!-- Card 4 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="automotriz">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-taller-automotriz.jpg" alt="Interior de taller automotriz moderno con elevadores hidráulicos y herramientas organizadas" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-taller-automotriz.jpg" alt="Interior de taller automotriz moderno con elevadores hidráulicos y herramientas organizadas" class="w-full h-full object-cover hero-media-b" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-secondary font-label-sm text-label-sm uppercase">Automotriz</span>
 </div>
 <div>
@@ -331,7 +337,7 @@
 <!-- Card 5 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="gastronomia">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-panaderia.jpg" alt="Vitrina de panadería con panes y repostería recién horneados en exhibición" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-panaderia.jpg" alt="Vitrina de panadería con panes y repostería recién horneados en exhibición" class="w-full h-full object-cover hero-media-a" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm uppercase">Gastronomía</span>
 </div>
 <div>
@@ -347,7 +353,7 @@
 <!-- Card 6 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="bienestar">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-gimnasio.jpg" alt="Interior de gimnasio moderno con equipos de pesas y máquinas de entrenamiento" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-gimnasio.jpg" alt="Interior de gimnasio moderno con equipos de pesas y máquinas de entrenamiento" class="w-full h-full object-cover hero-media-b" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary-container font-label-sm text-label-sm uppercase">Bienestar</span>
 </div>
 <div>
@@ -363,7 +369,7 @@
 <!-- Card 7 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="hogar">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-floristeria.jpg" alt="Arreglos florales coloridos en cubetas dentro de una floristería acogedora con luz natural" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-floristeria.jpg" alt="Arreglos florales coloridos en cubetas dentro de una floristería acogedora con luz natural" class="w-full h-full object-cover hero-media-a" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-secondary font-label-sm text-label-sm uppercase">Hogar y Regalos</span>
 </div>
 <div>
@@ -379,7 +385,7 @@
 <!-- Card 8 -->
 <div class="catalog-card p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5" data-categoria="gastronomia">
 <div class="h-36 w-full rounded-lg overflow-hidden relative">
-<img src="assets/img/catalogo-cafeteria.jpg" alt="Máquina de espresso cromada con vapor sobre mesón de madera en una cafetería de ambiente cálido" class="w-full h-full object-cover" loading="lazy"/>
+<img src="assets/img/catalogo-cafeteria.jpg" alt="Máquina de espresso cromada con vapor sobre mesón de madera en una cafetería de ambiente cálido" class="w-full h-full object-cover hero-media-b" loading="lazy"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm uppercase">Gastronomía</span>
 </div>
 <div>
